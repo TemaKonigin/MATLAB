@@ -1,4 +1,3 @@
-%ex.1
 str='195256 СПб Науки 49';
 disp('Оригинальная строка =');
 disp(['    "' str '"']); disp(' ');
@@ -6,13 +5,11 @@ spacePoz = findstr(str, ' ');
 disp('Длина строки без пробелов =');
 disp(length(str) - length(findstr(str, ' ')));
 
-%ex.2
 word1 = str(1:spacePoz(1)-1);
 word2 = str(spacePoz(end)+1:end);
 newStr = strcat(word2,str(spacePoz(1):spacePoz(end)));
 strRevert = strcat (newStr,[' ' word1])
 
-%ex.3
 i = 0;
 numStr = str;
 while i < length(numStr)
@@ -42,7 +39,6 @@ while i < length(numStr)
 end
 numStr
 
-%ex.4
 i = 1;
 numArray = 0;
 [a7, tf] = str2num(str(1:spacePoz(1)-1));
@@ -64,13 +60,11 @@ if tf
 end
 numArray
 
-%ex.5
 f=fopen('in7.txt','wt');
 fprintf(f,'195256 СПб Науки 49\n4.79 2.001 9.921 3.21 0.25\n1.129 1.865 8.341 9.33 8.01\n8.136 8.401 7.133 3.12 3.44');
 fclose(f);
 disp('in7.txt файл сгенирирован.'); disp(' ');
 
-%ex.6
 f=fopen('in7.txt','rt');
 fileStr=fgetl(f);
 i = 1;
@@ -156,7 +150,6 @@ end
 fileMatrix
 fclose(f);
 
-%ex.7
 FileHtml=fopen(['lab3_7.html'],'wt');
 fprintf(FileHtml,['<HTML>\n']);
 fprintf(FileHtml,['<head>\n']);
